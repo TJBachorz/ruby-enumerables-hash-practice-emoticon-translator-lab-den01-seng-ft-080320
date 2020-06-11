@@ -6,12 +6,7 @@ require "yaml"
 def load_library(file_path)
   emojis_list = YAML.load_file(file_path)
   emojis = {}
-  emojis_list.each do |k, v|
-    emojis[k][:english] = v[0]
-    binding.pry
-    emojis[k][:japanese] = v[1]
-  end
-  emojis
+  emoji_list
 end
 
 def get_japanese_emoticon
