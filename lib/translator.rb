@@ -13,14 +13,18 @@ def load_library(file_path)
 end
 
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(file_path, emoticon)
+  emoji_list = load_library(file_path)
+  emoji_list.each do |emoji_name, translations|
+    if translations[:english] == emoticon
+      return translations[:japanese]
+    end
+  end
 end
 
 def get_english_meaning(file_path, emoticon)
   emojis = load_library(file_path)
   emojis.each do |emoji_name, translations|
-    #binding.pry
     if translations[:japanese] == emoticon
       return emoji_name
     end
