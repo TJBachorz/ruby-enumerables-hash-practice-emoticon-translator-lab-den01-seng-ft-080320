@@ -22,7 +22,7 @@ def get_english_meaning(file_path, emoticon)
   #binding.pry
   emojis.each do |emoji_name, translations|
     if translations.any? { |jp_emoji| jp_emoji == emoticon }
-      binding.pry
+    binding.pry
       return emoji_name
     end
   end
