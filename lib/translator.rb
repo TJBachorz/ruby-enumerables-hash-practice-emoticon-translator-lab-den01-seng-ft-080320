@@ -19,7 +19,7 @@ end
 
 def get_english_meaning(file_path, emoticon)
   emojis = load_library(file_path)
-  binding.pry
+  #binding.pry
   emojis.each do |emoji, translations|
     if emojis[emoji].any? { |jp_emoji| jp_emoji } == emoticon
       return emoji
