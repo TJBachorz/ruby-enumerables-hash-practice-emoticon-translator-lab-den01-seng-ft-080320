@@ -12,10 +12,13 @@ def load_library(file_path)
   emojis
 end
 
+
 def get_japanese_emoticon
   # code goes here
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file_path, emoticon)
+  emojis = load_library(file_path)
+  binding.pry
+  emojis
 end
