@@ -8,9 +8,7 @@ def load_library(file_path)
   binding.pry
   emojis = Hash.new
   emoji_list.each do |k, v|
-    emojis[k][:english] = v[0]
-    binding.pry
-    emojis[k][:japanese] = v[1]
+    emojis[k] = {english: v[0], japanese: v[1]}
   end
   emojis
 end
