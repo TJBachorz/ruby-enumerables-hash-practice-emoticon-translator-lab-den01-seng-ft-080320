@@ -9,7 +9,6 @@ def load_library(file_path)
   emoji_list.each do |k, v|
     emojis[k] = {english: v[0], japanese: v[1]}
   end
-  binding.pry
   emojis
 end
 
